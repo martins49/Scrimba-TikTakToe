@@ -2,11 +2,15 @@ body {
     /* background-color: goldenrod; */
     margin: 0px;
     box-sizing: border-box;
-    background: whitesmoke;
+    background: rgb(136, 130, 130);
+    color: white;
 }
 
-.title {
+.center {
     text-align: center;
+}
+p.center{
+    font-size: 18px;
 }
 
 .grid {
@@ -15,9 +19,8 @@ body {
     grid-template-rows: repeat(3, 1fr);
     max-width: 400px;
     margin: 50px auto;
-    outline: 2px solid whitesmoke;
+    outline: 2px solid rgb(136, 130, 130);
     outline-offset: -2px;
-
 
     /* border-color: transparent; */
 }
@@ -31,4 +34,13 @@ body {
     display: flex;
     justify-content: center;
 
+}
+.square:hover{
+    background-color: rgb(179, 220, 250);
+    cursor: pointer;
+    font-size: 2.2em;
+    transition: all .4s  ease-in-out;
+}
+#display-el{
+   font-size: 30px;
 }

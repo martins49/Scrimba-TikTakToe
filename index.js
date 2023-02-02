@@ -1,12 +1,13 @@
 console.log("TikTakToe")
-const CATS = "🐱"
-const MONKEYS = "🐒"
+const CATS = "X"
+const MONKEYS = "O"
 
 let catsPicks = [];
 let monkeysPicks = [];
 
 let turn = CATS
 const squareEl = document.querySelectorAll(".grid div")
+const displayEl = document.getElementById("display-el")
 
 console.log(squareEl.length)
 // squareEl.addEventListener("click", function(){
@@ -46,7 +47,7 @@ function takeTurn() {
 }
 
 function checkWinner() {
-    let display = ""
+    let display;
     if (JSON.stringify(catsPicks) == JSON.stringify([0, 1, 2]) ||
         JSON.stringify(catsPicks) == JSON.stringify([3, 4, 5]) ||
         JSON.stringify(catsPicks) ==JSON.stringify([6, 7, 8]) ||
@@ -57,7 +58,7 @@ function checkWinner() {
         JSON.stringify(catsPicks) == JSON.stringify([2, 5, 8]) ||
         JSON.stringify(catsPicks) == JSON.stringify([6, 4, 2])
     )
-        display = "player 1 has won🐱🐱🐱"
+        display = "Player 1 has Won!!!🐱🐱🐱"
     else if (JSON.stringify(monkeysPicks) === JSON.stringify([0, 1, 2]) ||
         JSON.stringify(monkeysPicks) === JSON.stringify([3, 4, 5]) ||
         JSON.stringify(monkeysPicks) === JSON.stringify([6, 7, 8]) ||
@@ -69,8 +70,8 @@ function checkWinner() {
         JSON.stringify(monkeysPicks) === JSON.stringify([6, 4, 2])
 
     )
-        display = "player 2 has won🐒🐒🐒"
-    console.log(display);
+        display = "Player 2 has Won!!!🐒🐒🐒"
+        displayEl.textContent = display
 }
 
 
