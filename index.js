@@ -58,7 +58,7 @@ function checkWinner() {
         JSON.stringify(catsPicks) == JSON.stringify([2, 5, 8]) ||
         JSON.stringify(catsPicks) == JSON.stringify([6, 4, 2])
     )
-        display = "Player 1 has Won!!!🐱🐱🐱"
+        display = "Player 1 has Won!!!🐱🐱"
     else if (JSON.stringify(monkeysPicks) === JSON.stringify([0, 1, 2]) ||
         JSON.stringify(monkeysPicks) === JSON.stringify([3, 4, 5]) ||
         JSON.stringify(monkeysPicks) === JSON.stringify([6, 7, 8]) ||
@@ -70,7 +70,7 @@ function checkWinner() {
         JSON.stringify(monkeysPicks) === JSON.stringify([6, 4, 2])
 
     )
-        display = "Player 2 has Won!!!🐒🐒🐒"
+        display = "Player 2 has Won!!!🐒🐒"
         displayEl.textContent = display
 }
 
